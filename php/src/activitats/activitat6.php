@@ -11,14 +11,11 @@
 
 $nota = 5;
 
-$resultatNota = match($nota) {
-    
-    $nota < 5 => 'Insuficient',
-    $nota >= 5 || $nota<= 7 => 'Be',
-    $nota >= 8 || $nota<= 9 => 'Molt be',
-    $nota == 10 => 'Excelent',
-    default => 'Nota erronea',
-
+$resultatNota = match(true) {
+    $nota === 10 => 'Excel·lent',
+    $nota >= 8 && $nota <= 9 => 'Molt bé',
+    $nota >= 5 && $nota <= 7 => 'Bé',
+    default => 'Insuficient',
 };
 
 echo $resultatNota;

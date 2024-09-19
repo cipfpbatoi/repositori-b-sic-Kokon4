@@ -10,9 +10,8 @@ $resultatResta = resta(6,2);
 $resultatMultiplicacio = multiplicar(4,2);
 $resultatDivisio = dividir(4,2);
 
-echo $resultatSuma;
-echo $resultatResta;
-echo $resultatMultiplicacio;
-echo $resultatDivisio;
-
+echo "Suma: " . $resultatSuma . "<br>";
+echo "Resta: " . $resultatResta . "<br>";
+echo "Multiplicación: " . $resultatMultiplicacio . "<br>";
+echo "División: " . $resultatDivisio . "<br>";
 ?>
