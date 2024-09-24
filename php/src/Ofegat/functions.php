@@ -1,6 +1,5 @@
 <?php
 
-
 function mostrarPerPantalla($cadena) {
     foreach ($cadena as $index) {
         echo $index . " ";
