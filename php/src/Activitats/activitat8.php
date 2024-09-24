@@ -58,8 +58,6 @@
     <div>
         <button type="submit">Donar d'alta</button>
     </div>
-
-
 </form>
 </body>
 </html>
