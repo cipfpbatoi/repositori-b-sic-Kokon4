@@ -8,7 +8,5 @@ function inicialitziarGraella(){
             $graella[$files][$columnes] = "";
         }
     }
-
 }
-
 ?>
