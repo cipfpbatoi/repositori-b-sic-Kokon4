@@ -4,9 +4,13 @@ td {
     height: 50px;
     border-radius: 50%;
     border: 10px dotted #fff; /* Cercle amb punts blancs */
-    background-color: #000; /* Fons negre o pot ser un altre color */
+    background-color: #000000; /* Fons negre o pot ser un altre color */
     display: inline-block;
     margin: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-align: center ;
+    vertical-align: middle;
 }
 .player1 {
     background-color: red; /* Color vermell per un dels jugadors */
@@ -16,5 +20,5 @@ td {
 }
 .buid {
     background-color: white; /* Color blanc per cercles buits */
-    border-color: #000; /* Puntes negres per millor visibilitat */
+    border-color: #000000; /* Puntes negres per millor visibilitat */
 }
