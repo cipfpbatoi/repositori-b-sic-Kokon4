@@ -29,5 +29,4 @@ $arrayDescobert = guionitzarArray($arrayGuions);
     mostrarPerPantalla($arrayDescobert);
     echo "<br>" . "Numero de acerts: " . contarAcerts($arrayParaula,$lletra) . "<br>";
     echo "Paraula Introduida: " . $lletra;
-
 ?>
