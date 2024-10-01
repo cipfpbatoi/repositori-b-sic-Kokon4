@@ -10,7 +10,7 @@ function guionitzarArray($array) {
     return $array = array_fill(0,count($array),'_');
 }
 
-function comprovarAcerts($paraulaAEndevinar,$lletra,$paraulaBuida) {
+function comprovarAcerts($paraulaAEndevinar,$lletra,&$paraulaBuida) {
     $index = 0;
     foreach ($paraulaAEndevinar as $caracter) {
             $index++;
@@ -18,7 +18,7 @@ function comprovarAcerts($paraulaAEndevinar,$lletra,$paraulaBuida) {
             $paraulaBuida[$index] = $caracter;
         }
     }
-    return $paraulaBuida;
+
 }
 
 function contarAcerts($paraulaAEndevinar,$lletra){

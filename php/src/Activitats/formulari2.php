@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    
     <?php
     //Logica de php aqui es receveixen les dades demanades
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,7 +17,7 @@
             //Aqui mostrem el formulari
             ?>
             <h2>Formulari</h2>
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
+            <form action=""<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
             <label for="email">Correu electronic</label>
             <input type="email" id="email" name="email" required><br><br>
             <label for="missatge">Missatge</label>

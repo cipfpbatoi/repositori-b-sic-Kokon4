@@ -22,7 +22,7 @@ $arrayDescobert = guionitzarArray($arrayGuions);
     $lletra;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $lletra = htmlspecialchars($_POST["lletra"]);
-       $arrayDescobert = comprovarAcerts($arrayParaula,$lletra,$arrayDescobert);
+       comprovarAcerts($arrayParaula,$lletra,$arrayDescobert);
        mostrarPerPantalla($arrayDescobert);
        echo "<br>" . "Numero de acerts: " . contarAcerts($arrayParaula,$lletra) . "<br>";
        echo "Lletra Introduida: " . $lletra;
