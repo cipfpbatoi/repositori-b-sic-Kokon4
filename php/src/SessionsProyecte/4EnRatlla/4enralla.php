@@ -2,14 +2,13 @@
 session_start();
 include_once "functions.php";
 
-// Si es prem el botó de reiniciar, es reinicialitzen les variables de sessió
 if (isset($_POST['reiniciar'])) {
     $_SESSION['graella'] = inicialitzarGraella();
-    $_SESSION['torn'] = 1;  // El jugador 1 comença primer
+    $_SESSION['torn'] = 1;  
 } elseif (!isset($_SESSION['graella'])) {
-    // Si la sessió no té graella, inicialitzar el joc per primera vegada
+   
     $_SESSION['graella'] = inicialitzarGraella();
-    $_SESSION['torn'] = 1;  // El jugador 1 comença primer
+    $_SESSION['torn'] = 1; 
 }
 
 $graella = $_SESSION['graella'];
@@ -18,24 +17,22 @@ $jugador = $_SESSION['torn'];
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['reiniciar'])) {
     $columna = intval($_POST['columna']);
 
-    // Realitzar moviment
     if (ferMoviment($graella, $columna, $jugador)) {
-        // Comprovar si el moviment ha causat que el jugador guanyi
+
         if (comprovarVictoria($graella, $jugador)) {
             echo "El jugador $jugador ha guanyat!";
-            $_SESSION['final'] = true;  // Indicar que el joc ha acabat
+            $_SESSION['final'] = true;  
         } elseif (comprovarEmpat($graella)) {
             echo "El joc ha acabat en empat!";
             $_SESSION['final'] = true;
         } else {
-            // Canviar de torn només si el joc no ha acabat
+
             $_SESSION['torn'] = ($jugador == 1) ? 2 : 1;
         }
     } else {
         echo "Aquest moviment no és vàlid.";
     }
 
-    // Actualitzar la graella en la sessió
     $_SESSION['graella'] = $graella;
 }
 ?>
@@ -52,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['reiniciar'])) {
     <h1>Cuatre en Ralla</h1>
 
     <?php 
-    pintarGraella($graella);  // Mostrar la graella
+    pintarGraella($graella);  
     ?>
 
     <?php if (!isset($_SESSION['final'])): ?>
@@ -65,12 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['reiniciar'])) {
         </form>
     <?php endif; ?>
 
-    <!-- Botó per reiniciar el joc -->
     <form method="post">
         <button type="submit" name="reiniciar">Reiniciar joc</button>
     </form>
 
-    <!-- Botó per tancar sessió -->
     <form action="../logout.php" method="post">
         <button type="submit">Tancar sessió</button>
     </form>
