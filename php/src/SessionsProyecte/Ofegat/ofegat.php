@@ -30,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['reiniciar']) && !isse
     } elseif (!in_array('_', $_SESSION['arrayDescobert'])) {
         echo "<br><strong>Enhorabona! Has endevinat la paraula: " . $_SESSION['paraulaAEndevinar'] . "</strong>";
     }
-
     echo "<br>Intents restants: " . $_SESSION['intents'];
 }
 

@@ -18,7 +18,6 @@ function comprovarAcerts($paraulaAEndevinar,$lletra,&$paraulaBuida) {
             $paraulaBuida[$index] = $caracter;
         }
     }
-
 }
 
 function contarAcerts($paraulaAEndevinar,$lletra){
