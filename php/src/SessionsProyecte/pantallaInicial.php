@@ -9,14 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nom = htmlentities($_SESSION['nom']); 
     $contrasenya = htmlentities($_SESSION['contrasenya']); 
 
-
     if (isset($_POST['recordar'])) {
         setcookie('nom', $nom, time() + 3600); 
     }
 } else {
     $nom = $_SESSION['nom']; 
 }
-
 echo "Benvingut, " . $nom . "!";
 ?>
 <br><br>

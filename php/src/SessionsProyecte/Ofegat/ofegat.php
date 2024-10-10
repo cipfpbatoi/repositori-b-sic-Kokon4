@@ -14,7 +14,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['reiniciar']) && !isse
     $lletra = htmlspecialchars($_POST["lletra"]);
 
     comprovarAcerts($_SESSION['arrayParaula'], $lletra, $_SESSION['arrayDescobert']);
-
     mostrarPerPantalla($_SESSION['arrayDescobert']);
 
     $acerts = contarAcerts($_SESSION['arrayParaula'], $lletra);
