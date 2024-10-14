@@ -1,5 +1,8 @@
+<?php
 
+$numero = 1;
 
+?>
 
 
 
@@ -17,6 +20,6 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p>Holaaa el teu número es <?php echo $numero ?></p>
 </body>
 </html>
